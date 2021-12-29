@@ -1,0 +1,57 @@
+﻿<div class="content" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(@backgroundImage) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+">
+    <div class="logo">
+        @if (Heading_Main != null)
+        {
+            <h1>@Heading_Main</h1>
+        }
+        else
+        {
+            <h1>TECHCU</h1>
+        }
+    </div>
+    @if (Subheading_Main != null)
+    {
+        <h2>@Subheading_Main</h2>
+    }
+    else
+    {
+        <h2>Welcome to your home for online baking on the go!</h2>
+    }
+
+    @if(Paragraph_Main != null)
+    {
+        <p class="par">@Paragraph_Main</p>
+    }
+    else
+    {
+        <p class="par">Sign up for an account and bank happily ever after.</p>
+    }
+    <button class="cn"><a href="#">@Button_Main</a></button>
+    <div class="policy">
+        <p>By signing up for an account, your agree to our <br /><a href="#">Terms and Privacy Policy</a></p>
+    </div>
+
+</div>
+
+@code  {
+    [Parameter]
+    public RenderFragment? Heading_Main { get; set; }
+    [Parameter]
+    public RenderFragment? Subheading_Main { get; set; }
+    [Parameter]
+    public RenderFragment? Paragraph_Main { get; set; }
+    [Parameter]
+    public RenderFragment? Button_Main { get; set; }
+
+    [Parameter]
+    public string? backgroundImage { get;  set; } = "./_content/NativoPlus.BlazorRCL/2.jpg";
+
+
+
+}

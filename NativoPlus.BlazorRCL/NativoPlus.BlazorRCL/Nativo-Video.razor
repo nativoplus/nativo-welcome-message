@@ -1,0 +1,60 @@
+﻿@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+<section class="video_container">
+    @if (controls)
+    {
+        <video src="@(src ?? _videoPlaceHolder)" controls playsinline preload="none">
+            <img src="@(fallbackImage ?? _imagePlaceHolder)" title="Your browser does not support the <video> tag" />
+        </video>
+    }
+    else
+    {
+        <video src="@(src ?? _videoPlaceHolder)" autoplay=@autoplay loop=@loop muted=@muted playsinline preload="auto">
+            <img src="@(fallbackImage ?? _imagePlaceHolder)" title="Your browser does not support the <video> tag" />
+        </video>
+    }
+</section>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public string? src { get; set; }
+
+    [Parameter]
+    public bool autoplay { get; set; } = true;
+
+    [Parameter]
+    public bool loop { get; set; } = true;
+
+    [Parameter]
+    public bool muted { get; set; } = true;
+
+    [Parameter]
+    public bool controls { get; set; } = false;
+
+    [Parameter]
+    public string? fallbackImage { get; set; }
+
+    private readonly string _videoPlaceHolder = "./_content/NativoPlus.BlazorRCL/placeholder.mp4";
+    private readonly string _imagePlaceHolder = "./_content/NativoPlus.BlazorRCL/placeholder.png";
+
+    private IJSObjectReference? _module;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _module = await JS.InvokeAsync<IJSObjectReference>("import", 
+                "./_content/NativoPlus.BlazorRCL/Nativo-Video.razor.js");
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_module is not null)
+        {
+            await _module.DisposeAsync();
+        }
+    }
+}
