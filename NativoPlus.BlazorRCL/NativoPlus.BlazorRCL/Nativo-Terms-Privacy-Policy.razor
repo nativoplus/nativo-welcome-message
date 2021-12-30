@@ -1,0 +1,14 @@
+﻿<div class="policy">
+	<p> @policyText <br /><a href="@urlTermsPrivacyPolicy">@textTermsPrivacyPolicy</a></p>
+</div>
+@code {
+
+	[Parameter]
+	public string? urlTermsPrivacyPolicy { get; set; } = "#";
+
+	[Parameter]
+	public string? textTermsPrivacyPolicy { get; set; } = "Terms and Privacy Policy";
+
+	[Parameter]
+	public string? policyText { get; set; } = "By signing up for an account, your agree to our";
+}

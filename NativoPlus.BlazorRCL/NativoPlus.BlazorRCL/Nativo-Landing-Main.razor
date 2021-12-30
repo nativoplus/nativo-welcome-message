@@ -32,10 +32,8 @@ background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url
     {
         <p class="par">Sign up for an account and bank happily ever after.</p>
     }
-    <button class="cn"><a href="#">@Button_Main</a></button>
-    <div class="policy">
-        <p>By signing up for an account, your agree to our <br /><a href="#">Terms and Privacy Policy</a></p>
-    </div>
+    @Button_Main
+    @Policy_Main
 
 </div>
 
@@ -50,8 +48,12 @@ background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url
     public RenderFragment? Button_Main { get; set; }
 
     [Parameter]
+    public RenderFragment? Policy_Main { get; set; }
+
+    [Parameter]
     public string? backgroundImage { get;  set; } = "./_content/NativoPlus.BlazorRCL/2.jpg";
 
 
 
 }
+

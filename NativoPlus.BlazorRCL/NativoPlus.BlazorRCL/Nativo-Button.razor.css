@@ -1,0 +1,23 @@
+﻿
+.cn{
+	width: 160px;
+	height: 40px;
+	background-color: #06437a;
+	border: none;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	font-size: 18px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.cn a{
+	text-decoration: none;
+	color: #FFFFFF;
+	transition: .3s ease;
+}
+
+.cn:hover{
+	background-color: #1e81b0;
+	color: #FFFFFF;
+}

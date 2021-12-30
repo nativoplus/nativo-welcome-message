@@ -17,10 +17,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Nativo-Button.razor.css" />
     <None Remove="Nativo-Landing-Main.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Nativo-Button.razor.css" />
     <Content Include="Nativo-Landing-Main.razor.css" />
   </ItemGroup>
 

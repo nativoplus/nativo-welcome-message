@@ -1,0 +1,9 @@
+﻿<button class="cn"><a href="@url">@text</a></button>
+
+
+@code{
+	[Parameter]
+	public string? url { get; set; } =  "#";
+	[Parameter]
+	public string? text { get; set; } =  "Begin";
+}
