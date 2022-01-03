@@ -1,10 +1,12 @@
 ﻿.policy {
-    margin-top: 15px;
-    font-size: 15px;
-    padding-left: 20px;
+    color: #ffffff;
+    font-family: "Avenir-Book";
+    font-weight: 400;
+    line-height: 20px;
 }
 
     .policy a {
         text-decoration: none;
-        color: #abdbe3;
+        color: #5C7C7F;
+        font-family: "Avenir-Heavy";
     }
