@@ -13,32 +13,50 @@
     width: 50%;
 }
 
-.Row{
-    margin: auto;
+.Row {
     display: block;
+    width: 100%;
 }
 
-.Logo > img{
-    width:214px;
+.Logo{
     margin-top: 100px;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.Logo > img{
 }
 
 .Subheading {
     font-size: 40px;
     margin-top: 80px;
     width: 350px;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 .Paragraph {
     margin-top: 10px;
     width: 350px;
     font-size: 26px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .Buttom {
-    margin-top: 60px;
+    /*Design button*/
+    font-family: "Avenir-Light";
+    display: flex;
+    width: 350px;
+    justify-content: left;
+    height: auto;
+    padding-left: 23%;
 }
-.Policy {
-    margin-top: 20px;
+.Policy{
+    display:flex;
+    width:350px;
+    justify-content: center;
+    height: auto;
+    text-align:center;
+
 }
 
 @media (max-width: 640px){

@@ -2,17 +2,15 @@
     background: #5c7c7f;
     background-blend-mode: normal;
     border-radius: 20px;
-    width: 160px;
+    width: 100px;
     height: 40px;
     text-align: center;
-    font-family: "Avenir-Light";
 }
-
-    .cn a {
-        text-decoration: none;
-        color: #FFFFFF;
-        /* transition: .3s ease; */
-        font-size: 24px;
-        line-height: 38px;
-        text-transform:uppercase;
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    /* transition: .3s ease; */
+    font-size: 24px;
+    line-height: 38px;
+    text-transform:uppercase;
     }
