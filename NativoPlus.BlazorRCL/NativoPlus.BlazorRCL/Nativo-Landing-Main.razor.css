@@ -1,1 +1,107 @@
-﻿
+﻿.Content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    color: #FFFFFF;
+    overflow-y: scroll;
+    font-family: "Avenir-Light";
+}
+
+.Column{
+    display:inline-block;
+    width: 50%;
+}
+
+.Row {
+    display: block;
+    width: 100%;
+}
+
+.Logo{
+    margin-top: 100px;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.Logo > img{
+}
+
+.Subheading {
+    font-size: 45px;
+    margin-top: 80px;
+    max-width: 350px;
+    color: white;
+    font-weight: normal;
+}
+.Paragraph {
+    max-width: 350px;
+    font-size: 22px;
+    color: rgba(255,255,255, .5);
+}
+.Buttom {
+    /*Design button*/
+    font-family: "Avenir-Light";
+    display: flex;
+    width: 350px;
+    justify-content: left;
+    height: auto;
+    padding-left: 23%;
+}
+.Policy{
+    display:flex;
+    width:350px;
+    justify-content: center;
+    height: auto;
+    text-align:center;
+
+}
+
+@media (max-width: 640px){
+    .Content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: auto;
+        color: #FFFFFF;
+        overflow-y: scroll;
+        font-family: "Avenir-Light";
+    }
+
+    .Column {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .Row {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .Logo > img {
+        width: 214px;
+        margin-top: 100px;
+    }
+
+    .Subheading > h2 {
+        font-size: 40px;
+        margin-top: 80px;
+        width: 350px;
+    }
+
+    .Paragraph {
+        margin-top: 10px;
+        width: 350px;
+        font-size: 26px;
+    }
+
+    .Buttom {
+        margin-top: 60px;
+    }
+
+    .Policy {
+        margin-top: 20px;
+    }
+
+}
