@@ -1,38 +1,32 @@
-﻿<div class="Content" style="
-background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(@backgroundImage) no-repeat fixed center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-">
-    <div class="Column">
-        <div class="Logo Row">
-            <img src="@LogoMain" title="Logo" alt="Logo" />
-    </div>
+﻿<div>
+    <!-- Background image -->
+    <div class="bg-image"
+         style="background-image: url(@backgroundImage);
+            height: 100vh">
+        <div class="d-flex align-items-center justify-content-center" style="height:100vh;">
+            <div class="row">
+                <div class="col-md-12 m-3">
+                    <img src="@LogoMain" title="Logo" alt="Logo" />
+                </div>
+                <div class="col-md-6 m-3">
+                    <h2>@SubheadingMain</h2>
+                </div>
 
-    <div class="Subheading Row">
-        <h2>@SubheadingMain</h2>
-    </div>
+                <div class="col-md-12 m-3">
+                    <p>@ParagraphMain</p>
+                </div>
 
-    <div class="Paragraph Row">
-        <p>@ParagraphMain</p>
-    </div>
+                <div class="col-md-12 m-3">
+                    @Button_Main
+                </div>
+                <div class="col-md-12 m-3">
+                    @Policy_Main
+                </div>
 
-    <div class="Buttom Row">
-        @Button_Main
+            </div>
+        </div>
     </div>
-    <div class="Policy Row">
-        @Policy_Main
-    </div>
-    </div>
-    <div class="Column">
-
-    </div>
-    
-    
-
 </div>
-
 @code  {
     [Parameter]
     public string? LogoMain { get; set; } = "./_content/NativoPlus.BlazorRCL/tcu-logo-high-res-blanco.png";
